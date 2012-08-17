@@ -222,6 +222,10 @@ em
 
 // Content styling
 .main-content
+  width: 100%
+  float: left
+  margin-bottom: 50px
+
   .block
     width: 45%
     height: 255px
@@ -262,5 +266,20 @@ em
 
 #mainfooter
   clear: both
+  padding: 20px 0
+  background: #ddd9d1
+
+.socnet
+  li
+    float
+
+  a
+    width: 58px
+    height: 60px
+    display: block
+    +hide-text
+
+  @each $social in twitter, facebook
+    +data-uri-bg("i-#{$social}.png", no-repeat)
 
 @import media
