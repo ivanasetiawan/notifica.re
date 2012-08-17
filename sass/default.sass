@@ -5,34 +5,35 @@
 // Font face
 @font-face
   font-family: 'lavanderia_delicate'
-  src: url('../public/fonts/lavanderia_delicate-webfont.eot')
-  src: local('☺'), url('../public/fonts/lavanderia_delicate-webfont.woff') format('woff'), url('../public/fonts/lavanderia_delicate-webfont.ttf') format('truetype'), url('../public/fonts/lavanderia_delicate-webfont.svg') format('svg')
+  src: url('../fonts/lavanderia_delicate-webfont.eot')
+  src: local('☺'), url('../fonts/lavanderia_delicate-webfont.woff') format('woff'), url('../fonts/lavanderia_delicate-webfont.ttf') format('truetype'), url('../fonts/lavanderia_delicate-webfont.svg') format('svg')
   font-style: normal
 
 @font-face
   font-family: 'lavanderia_regular'
-  src: url('../public/fonts/lavanderia_regular-webfont.eot')
-  src: local('☺'), url('../public/fonts/lavanderia_regular-webfont.woff') format('woff'), url('../public/fonts/lavanderia_regular-webfont.ttf') format('truetype'), url('../public/fonts/lavanderia_regular-webfont.svg') format('svg')
+  src: url('../fonts/lavanderia_regular-webfont.eot')
+  src: local('☺'), url('../fonts/lavanderia_regular-webfont.woff') format('woff'), url('../fonts/lavanderia_regular-webfont.ttf') format('truetype'), url('../fonts/lavanderia_regular-webfont.svg') format('svg')
   font-style: normal
 
 @font-face
   font-family: 'lavanderia_sturdy'
-  src: url('../public/fonts/lavanderia_sturdy-webfont.eot')
-  src: local('☺'), url('../public/fonts/lavanderia_sturdy-webfont.woff') format('woff'), url('../public/fonts/lavanderia_sturdy-webfont.ttf') format('truetype'), url('../public/fonts/lavanderia_sturdy-webfont.svg') format('svg')
+  src: url('../fonts/lavanderia_sturdy-webfont.eot')
+  src: local('☺'), url('../fonts/lavanderia_sturdy-webfont.woff') format('woff'), url('../fonts/lavanderia_sturdy-webfont.ttf') format('truetype'), url('../fonts/lavanderia_sturdy-webfont.svg') format('svg')
   font-style: normal
 
 // Variable
 $fontFamily: 'Lato', 'Helvetica Neue', Helvetica, Arial, Sans-Serif
-$fontColor: #111
-$alertColor: #c30c30
+$fontColor: #39321f
+$leafColor: #9fbe47
+$skyColor: #92c4cf
 
 ::-moz-selection
-  background: $alertColor
+  background: $leafColor
   color: #fff
   text-shadow: none
 
 ::selection
-  background: $alertColor
+  background: $leafColor
   color: #fff
   text-shadow: none
 
@@ -40,10 +41,10 @@ $alertColor: #c30c30
 =data-uri-bg($image, $properties: false)
   @if $properties != false
     background: inline-image($image) $properties
-    *background: url(/images/#{$image}) $properties
+    *background: url(../images/#{$image}) $properties
   @else
     background: inline-image($image)
-    *background: url(/images/#{$image})
+    *background: url(../images/#{$image})
 
 =retina-image($image, $ext, $resolution, $properties: false)
   background: url(../images/#{$image}.#{$ext}) $properties
@@ -64,21 +65,202 @@ $alertColor: #c30c30
 
 =handWritingBold
   font-family: 'lavanderia_sturdy', $fontFamily
+  text-transform: lowercase
 
 body
   font-family: $fontFamily
   /* The font-size is now 0.625 * 16px = 10px. */
   font-size: 0.625em
   /* The leading is now 25 pixels. */
-  line-height: 2.5em
+  line-height: 2.4em
   color: $fontColor
-  +retina-image("bg", "jpg", 50px 50px, repeat)
+  background: url("../images/bg-body.png") #ede7e2 top center repeat-x
 
 a
-  color: $alertColor
+  color: $fontColor
   text-decoration: none
 
-  &:hover
-    color: #0070b8
+em
+  font-style: none
+  font-weight: bold
+
+.wrap
+  max-width: 1000px
+  margin: 0 auto
+
+// Button styling
+.btn
+  display: inline-block
+  padding: 5px 15px
+  color: #fff
+  +border-radius(4px)
+  background: $leafColor
+
+  &.sky
+    background: $skyColor
+
+// Header
+#mainheader
+  margin-bottom: 40px
+  position: relative
+
+  h1 a
+    min-height: 23px
+    display: inline-block
+    margin-top: 20px
+    padding: 73px 10px 10px 110px
+    +handWritingBold
+    font-size: 5.6em
+    +data-uri-bg("logo.png", no-repeat)
+
+  .menu
+    right: 0
+    bottom: 5px
+
+.menu
+  position: absolute
+
+  li
+    float: left
+    margin-left: 30px
+
+    &.dashboard
+      margin-left: 30px
+      padding-left: 30px
+      border-left: solid 1px $fontColor
+
+      a
+        padding: 8px 30px
+        background: $skyColor
+        color: #fff
+        +border-radius(4px)
+
+  a
+    padding: 8px 5px
+    display: block
+    font-size: 1.6em
+    line-height: 1
+    font-weight: 200
+
+    &:hover
+      opacity: 0.7
+
+.introduction
+  height: 450px
+  position: relative
+  margin-bottom: 40px
+  overflow: hidden
+
+  h2
+    margin-bottom: 25px
+    font-size: 3.6em
+    font-weight: 200
+    line-height: 1.15
+
+  em
+    display: block
+
+  .text
+    width: 24.5%
+    font-size: 1.5em
+    line-height: 2em
+
+  p
+    margin-bottom: 25px
+
+  .btn
+    display: block
+    padding: 13px 30px
+    margin-bottom: 15px
+    font-size: 1.6em
+    text-align: center
+    text-decoration: none
+
+    span
+      font-weight: 200
+
+  a
+    text-decoration: underline
+
+  .appstore
+    top: 10px
+    right: 0
+    position: absolute
+
+.intro-image
+  width: 68.5%
+  height: 355px
+  position: absolute
+  bottom: 0
+  right: 0
+
+  img
+    +fleximage
+
+.appstore
+  li
+    float: left
+    height: 50px
+    margin-left: 30px
+    +hide-text
+
+    &:first-child
+      margin-left: 0
+
+  a
+    width: 150px
+    height: 50px
+    display: block
+
+  .google
+    width: 154px
+    opacity: 0.5
+
+  @each $app in google, apple
+    .#{$app}
+      +data-uri-bg("app-#{$app}.png", no-repeat)
+
+// Content styling
+.main-content
+  .block
+    width: 45%
+    height: 255px
+    position: relative
+    margin-left: 2%
+    padding: 2%
+    float: left
+    text-align: center
+    background: #fff
+
+    &:first-child
+      margin-left: 0
+
+    p
+      margin-bottom: 20px
+      font-weight: 200
+      color: #7a776e
+
+  p
+    font-size: 1.6em
+
+
+  h3
+    margin: 10px 0 25px
+    +handWritingBold
+    font-size: 5em
+    text-align: center
+
+  .appstore
+    display: inline-block
+
+  .phone-image
+    width: 280px
+    position: absolute
+    left: 50%
+    bottom: -70px
+    margin-left: -140px
+
+#mainfooter
+  clear: both
 
 @import media
