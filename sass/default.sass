@@ -1,6 +1,7 @@
 // Compass imports & mixins
 @import "compass"
 @import "compass/reset"
+@import "compass/layout/sticky-footer"
 
 // Font face
 @font-face
@@ -67,6 +68,9 @@ $skyColor: #92c4cf
   font-family: 'lavanderia_sturdy', $fontFamily
   text-transform: lowercase
 
+// Sticky footer
++sticky-footer(54px, "#main-wrapper", "#root-footer", "#mainfooter")
+
 body
   font-family: $fontFamily
   /* The font-size is now 0.625 * 16px = 10px. */
@@ -124,7 +128,7 @@ em
     float: left
     margin-left: 30px
 
-    &.dashboard
+    &.button
       margin-left: 30px
       padding-left: 30px
       border-left: solid 1px $fontColor
@@ -146,7 +150,7 @@ em
       opacity: 0.7
 
 .introduction
-  height: 450px
+  height: 454px
   position: relative
   margin-bottom: 40px
   overflow: hidden
@@ -265,13 +269,25 @@ em
     margin-left: -140px
 
 #mainfooter
+  height: 160px
   clear: both
-  padding: 20px 0
   background: #ddd9d1
 
+  .wrap
+    position: relative
+    padding: 30px 0
+    overflow: hidden
+
+  nav
+    top: 70px
+    right: 0
+
 .socnet
+  margin: 20px 0 0 -15px
+
   li
-    float
+    float: left
+    margin-left: 15px
 
   a
     width: 58px
@@ -279,7 +295,8 @@ em
     display: block
     +hide-text
 
-  @each $social in twitter, facebook
-    +data-uri-bg("i-#{$social}.png", no-repeat)
+  @each $soc in twitter, facebook
+    .#{$soc}
+      +data-uri-bg("i-#{$soc}.png", no-repeat)
 
 @import media
