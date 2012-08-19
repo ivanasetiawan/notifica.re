@@ -222,7 +222,7 @@ em
   li
     float: left
     height: 50px
-    margin-left: 30px
+    margin-left: 15px
     +hide-text
 
     &:first-child
@@ -300,12 +300,19 @@ section.intro
     font-weight: 200
     line-height: 1.8em
 
+    p
+      margin-bottom: 25px
+
   .btn
     right: 0
-    bottom: 20px
+    bottom: 40px
     position: absolute
     font-size: 1.2em
     padding: 10px 25px
+
+.fb-app
+  width: 32%
+  float: right
 
 .services-block
   h3
@@ -389,6 +396,40 @@ section.intro
     background-position: -36px 0
   &.four
     background-position: -18px 0
+
+.ninjas-block
+  float: left
+  width: 100%
+  margin-bottom: 50px
+
+  li
+    width: 23.5%
+    float: left
+    margin-left: 20px
+    padding-top: 265px
+    position: relative
+    float: left
+
+    &:first-child
+      margin-left: 0
+
+  h4
+    text-align: center
+    font-size: 4.8em
+    +handWritingBold
+
+.circle
+  width: 100%
+  height: 235px
+  top: 0
+  left: 0
+  position: absolute
+  overflow: hidden
+  +border-radius(50%)
+  border: solid 5px #fff
+
+  img
+    z-index: -1
 
 #mainfooter
   height: 160px
