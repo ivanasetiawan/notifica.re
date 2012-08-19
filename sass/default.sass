@@ -309,12 +309,17 @@ section.intro
 
 .services-block
   h3
+    font-family: $fontFamily
     font-size: 4.8em
     font-weight: 200
     line-height: 1
+    text-align: left
     margin-bottom: 20px
 
 .service-lists
+  margin-bottom: 50px
+  overflow: hidden
+
   li
     width: 32%
     position: relative
@@ -330,25 +335,60 @@ section.intro
 
   .image-holder
     width: 100%
-    height: 160px
+    height: 145px
     position: absolute
     top: 0
     left: 0
+    padding-top: 15px
     text-align: center
     background: #fff
     +border-radius(4px 4px 0 0)
 
+    img
+      display: inline-block
+
   article
-    padding: 10px 20px
+    padding: 10px 20px 15px
 
   header p
     font-style: normal
 
-  h4, p
+  h4
     font-size: 1.6em
+    font-weight: 700
 
   p
+    margin-bottom: 10px
+    font-size: 1.4em
     font-style: italic
+
+.download-info
+  position: relative
+
+  p
+    margin-bottom: 0
+    font-style: normal
+
+  .btn
+    bottom: 0
+    right: 0
+    position: absolute
+    font-size: 1.4em
+
+.star
+  width: 94.5px
+  height: 18px
+  +data-uri-bg("bg-stars.png", no-repeat)
+  overflow: hidden
+
+  &.one
+    background-position: -72px 0
+  &.two
+    background-position: -56px 0
+  &.three
+    background-position: -36px 0
+  &.four
+    background-position: -18px 0
 
 #mainfooter
   height: 160px
