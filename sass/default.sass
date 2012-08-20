@@ -350,13 +350,14 @@ em
     margin-left: -140px
 
 // Intro layout on services and about us
-section.intro
+section.intro, section.blogs
   h2
     margin-bottom: 25px
     font-size: 6em
     font-weight: 200
     line-height: 1
 
+section.intro
   .text
     width: 66%
     float: left
@@ -483,17 +484,71 @@ section.intro
     +handWritingBold
 
 .circle
+  overflow: hidden
+  +border-radius(50%)
+  border: solid 5px #fff 
+  display: inline-block
+
+.awesome-person
   width: 100%
   height: 235px
   top: 0
   left: 0
   position: absolute
-  overflow: hidden
-  +border-radius(50%)
-  border: solid 5px #fff
 
   img
     z-index: -1
+
+// Blogs
+section.blogs
+  article
+    height: 425px
+    position: relative
+    margin-bottom: 30px
+    padding: 20px 20px 20px 680px
+    background: #fff
+
+  h3
+    margin-top: 0
+    font-size: 4.4em
+    font-family: $fontFamily
+    font-weight: 200
+    text-align: left
+    line-height: 1.1364em
+
+  .article-img, .author-info
+    position: absolute
+    top: 20px
+
+  .article-img
+    width: 64%
+    left: 20px
+    overflow: hidden
+
+    img
+      +fleximage
+
+  .author-info
+    left: 40px
+    padding: 5px 20px
+    text-align: center
+    z-index: 2
+    background: #fff
+
+    p
+      font-size: 1.4em
+  
+    .name
+      font-size: 1.8em
+
+  .author-img
+    width: 80px
+    height: 80px
+    border-color: #ad9b87
+
+  .article-text
+    height: 300px
+    overflow: hidden
 
 #mainfooter
   height: 160px
