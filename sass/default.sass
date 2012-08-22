@@ -84,9 +84,10 @@ a
   color: $fontColor
   text-decoration: none
 
-input[type="text"], input[type="password"]
+input[type="text"], input[type="password"], textarea
   border: 0
   padding: 10px 2%
+  outline: none
 
 input[type="submit"]
   border: 0
@@ -183,6 +184,22 @@ em
         color: #fff
         background: $skyColor
 
+.dashboard-menu
+  margin-bottom: 10px
+  overflow: hidden
+
+  li
+    float: left
+    font-size: 1.3em
+    text-transform: uppercase
+    border-right: solid 1px $fontColor
+
+    &.active a
+      color: #ca483b
+
+  a
+    padding: 8px 15px
+
 .popup
   width: 500px
   right: 0
@@ -212,7 +229,13 @@ em
     border: 0
     padding: 10px 2%
 
+  input[type="password"]
+    width: 98%
+    border: 0
+    padding: 10px 2%
+
   input[type="submit"]
+    font-family: $fontFamily
     float: right
     font-size: 2em
     margin-top: 25px
@@ -317,6 +340,9 @@ em
   float: left
   margin-bottom: 50px
 
+  &.alt
+    background: #fff
+
   .block
     width: 45%
     height: 255px
@@ -355,8 +381,9 @@ em
     bottom: -70px
     margin-left: -140px
 
-.white-box
-  background: #fff
+// Centered form
+.centered-form
+  padding: 20px
 
 // Intro layout on services and about us
 section.intro, section.blogs
@@ -398,21 +425,18 @@ section.intro
     margin-bottom: 20px
 
 .service-lists
-  margin-bottom: 50px
+  margin: 0 0 40px -15px
   overflow: hidden
 
   li
-    width: 32%
+    width: 31.8%
     position: relative
     padding-top: 160px
     float: left
-    margin-left: 2%
+    margin: 0 0 15px 15px
     background: #e1dad4
     +border-radius(4px)
     overflow: hidden
-
-    &:first-child
-      margin-left: 0
 
   .image-holder
     width: 100%
@@ -593,6 +617,109 @@ section.blogs
     .#{$soc}
       +data-uri-bg("i-#{$soc}.png", no-repeat)
 
+.white-box
+  position: relative
+  padding: 20px
+  background: #fff
+
+  h2
+    margin-bottom: 20px
+    font-size: 5em
+    font-weight: 300
+    line-height: 1
+
+  .add-service
+    top: 20px
+    right: 20px
+    position: absolute
+    padding: 15px 30px
+    font-size: 2.4em
+
+table
+  width: 100%
+  margin-bottom: 30px
+  font-size: 1.8em
+  
+  tr
+    border-bottom: solid 1px #fff
+
+  th, td
+    padding: 15px 20px
+    background: #efe9e4
+
+  th
+    padding: 15px 20px
+    background: #e1dad4
+
+.buttons-action
+  margin-bottom: 30px
+  font-size: 2.4em
+  font-weight: 300
+  text-align: center
+
+  a
+    padding: 20px 55px
+
+// Layout with 2 columns
+.twocols
+  margin-bottom: 30px
+  overflow: hidden
+
+  .main-col, .chart
+    width: 66.6667%
+    float: left
+
+  .chart
+    float: right
+
+  .secondary-col,
+  .intro-statistic
+    width: 31.25%
+
+  .secondary-col
+    float: right
+    background: #efe9e4
+
+    > div
+      padding: 20px
+
+.intro-statistic
+  min-height: 212px
+  float: left
+  background: #e9f3f5
+
+  p
+    margin: 10px
+
+// Generic form styling
+form.generic
+  .field
+    overflow: hidden
+    margin-bottom: 10px
+
+  label, input[type="text"], textarea
+    padding: 13px 10px
+    font-size: 2.4em
+    font-weight: 300
+    line-height: 1
+
+  label
+    width: 20%
+    display: block
+    float: left
+    color: #fff
+    background: #aea79d
+
+  input[type="text"], textarea
+    width: 73%
+    padding: 10px
+    margin: 0
+    background: #e1dad4
+    border: 0
+
+  textarea
+    height: 200px
+    
 // Lightbox
 #lightbox
   width: 100%
