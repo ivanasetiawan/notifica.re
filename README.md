@@ -1,4 +1,4 @@
 notifica.re
 ===========
 
-notifica.re new design
+notifica.re article
