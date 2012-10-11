@@ -1,137 +1,55 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8">
-		<title>Notifica.re</title>
-		<meta name="description" content="Missing out on important stuff? Not if I care!">
-		<meta name="author" content="Joel, Joris, Koen, &amp; Ivana">
+		<title>Notifica.re!</title>
+		<meta name="description" content="Notifica.re">
+		<meta name="author" content="Ivana Setiawan">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="public/css/styling.css">
 
-		<link rel="stylesheet" href="public/css/default.css">
+		<link rel="shortcut icon" href="public/images/favicon.ico" type="image/ico">
 
-		<!-- Google Webfont -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700|Oxygen+Mono' rel='stylesheet' type='text/css'>
 
 		<link rel="shortcut icon" href="public/images/favicon.ico" type="image/ico">
 
 		<script src="public/js/modernizr.js"></script>
+
 	</head>
 
 	<body>
-		<div class="wrap" id="main-wrapper">
-			<header id="mainheader">
-				<h1><a href="index.html">Notificare!</a></h1>
-				<nav class="menu">
-					<ul>
-						<li><a href="about-us.html">About us</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="services.html">Services</a></li>
-						<li><a href="#">Developers</a></li>
-						<li>
-							<ul class="submenu">
-								<li class="button active">
-									<a href="#">Sign in</a>
-									<div class="popup">
-										<form>
-											<div class="field">
-												<label>e-mail address</label>
-												<input type="text">
-											</div>
-											<div class="field">
-												<label>password</label>
-												<input type="text">
-											</div>
-											<ul>
-												<li><a href="#">forgot password?</a></li>
-												<li><a href="#">make account</a></li>
-											</ul>
-											<input type="submit" class="btn dark" value="sign in">
-										</form>
-									</div>
-								</li>
-								<li class="button"><a href="#">Sign up</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-			</header>
-
-			<section class="introduction">
-				<h2>
-					missing out on important stuff?
-					<em>not if I care!</em>
-				</h2>
-
-				<div class="text">
-					<p>Always busy? And you have a full inbox? The notificare app keeps YOU in control of your notifications. Take immediate action on your phone with just a push of a button.  Notificare. Get notified. Take action!</p>
-					<a href="#" class="btn">Sign up <span>for free</span></a>
-					<a href="#">Have an account? Sign in here.</a>
-				</div>
-
-				<ul class="appstore">
-					<li class="google">Android</li>
-					<li class="apple"><a href="#">Apple</a></li>
-				</ul>
-
-				<div class="intro-image">
-					<img src="public/images/intro.jpg" alt="Intro image">
-				</div>
-			</section>
-
-			<div class="main-content">
-				<div class="block">
-					<h3>Download the app</h3>
-					<ul class="appstore">
-						<li class="google">Android</li>
-						<li class="apple"><a href="#">Apple</a></li>
-					</ul>
-					<div class="phone-image">
-						<img src="public/images/phone.png" alt="Phone image">
-					</div>
-				</div>
-
-				<div class="block">
-					<h3>Service central</h3>
-					<p>Services are the building blocks for Notificare. In service central you can pick some of the apps we added or start developing <br>your own.</p>
-					<p>
-						<a href="#" class="btn sky">Sign in</a>
-						or
-						<a href="#">Sign up</a>
-					</p>
-					<div class="services-image">
-						<img src="public/images/services.png" alt="Services dummy image">
-					</div>
-				</div>
-			</div>
-
-			<div id="root-footer"></div>
-		
-		</div>
-
-		<footer id="mainfooter">
+		<header id="mainheader">
 			<div class="wrap">
-				<ul class="socnet">
-					<li><a href="#" class="twitter">Twitter</a></li>
-					<li><a href="#" class="facebook">Facebook</a></li>
-				</ul>
-				<nav class="menu">
-					<ul>
-						<li><a href="about-us.html">About us</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="services.html">Services</a></li>
-						<li><a href="#">Developers</a></li>
-						<li>
-							<ul class="submenu">
-								<li class="button"><a href="#">Sign in</a></li>
-								<li class="button"><a href="#">Sign up</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
+				<h1 id="logo">Notificare</h1>
+
+				<div class="intro">
+					<!-- <p>{Imagine this}</p> -->
+					<p><span class="hightlight light">[07:10:08AM]</span> - You get in to your fully charged <a href="http://www.youtube.com/watch?v=cdgQpa1pUUE" target="_blank">self-drive {electric} car</a>. As you put on your seatbelt the navigation system reminding you that you will have <span class="hightlight">3 appointments today, the first one is at 8:00AM</span>, located 25.3km away from your current location. <br>While the navigation system is calculating the first commute time based on the distance, weather, and traffic density; it's telling you the quick overview regarding the first meeting that you already defined on your calendar one and a half week ago.</p>
+
+					<p><span class="hightlight light">[07:11:28AM]</span> - The machine gets back at you and notify that it will take 36 minutes to get there. You're taking off at [07:11:30AM]</p>
+
+					<p><span class="hightlight light">[07:11:30AM]</span> - Since it will only take 36minutes to get there, your car understands that you still have [0:12:30] time left, therefore it offers you an option to grab a cup fo coffee at a drive-through coffeeshop on the way. You say 'yes' so it recalculates your journey to be [00:40:25] while sending a note to the coffeeshop so your coffee will be ready at [07:50:55AM] to be picked up.</p>
+
+					<p><span class="hightlight light">[07:51:55AM]</span> - You're arriving at the first meeting appointment of the day.</p>
+
+				</div>
 			</div>
-		</footer>
+		</header>
+
+		<section class="wrap content">
+			<h2>~ Flash back to today ~</h2>
+			<p class="with-letter"><span class="letter">T</span>he scenario above is no magic nor a science fiction story, it is about how the future is foreseen by enthusiastic nerds behind Notificare team. They truly believe that the world can be a better place when automation and machine intellegence help humans in doing their daily activities so that we can shift from spending hours to do chores to doing pivotal or fun stuff we enjoy.</p>
+
+			<p>With this in mind, Notificare is shaped and refined. Here is how this awesomeness started.</p>
+
+			<h2>~ Not if I care! ~</h2>
+			<p>"Notificare was born out of neccesity, the idea came up since the web 2.0", Joel started. Notificare team believes that the web and the future of it will not be about people inserting, collecting, or manupulating data but will be about automate how the data is fetched.</p>
+
+			<p>We are entering an age where everything is written in a way that is open to the outside world so any system can access. Notificare idea started growing from having the necessity of connecting to an API in some system and at the same time connecting to another API on other system and being able to manipulate that data by doing some easy action such as clicking a button or by just automating, identifying that the data is what we need</p>
+
+		</section>
 
 	</body>
 

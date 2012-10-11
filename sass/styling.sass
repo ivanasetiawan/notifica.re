@@ -1,0 +1,88 @@
+@import "base"
+
+body
+  font-family: $fontFamily
+  /* The font-size is now 0.625 * 16px = 10px. */
+  font-size: 0.625em
+  /* The leading is now 25 pixels. */
+  line-height: 2.5em
+  color: $fontColor
+  +retina-image("light_toast", "png", 200px 200px, repeat)
+
+.wrap
+  max-width: 700px
+  margin: 0 auto
+
+h3
+  margin: 50px 0 0
+  font-size: 2em
+  font-weight: bold
+  font-family: $titleFont
+
+h2
+  text-align: center
+  margin: 30px 0 25px
+  font-size: 3em
+  font-weight: 700
+  text-decoration: uppercase
+
+#mainheader
+  min-height: 200px
+  padding: 30px 0
+  margin-bottom: 30px
+  background: bgColor(0.6)
+
+#logo
+  width: 290px
+  padding: 80px 0 0 170px
+  margin: 0 auto 30px
+  font-size: 11em
+  line-height: 1
+  +handWritingBold
+  +retina-image("logo", "png", 200px 142px, no-repeat)
+
+.content, .intro, footer
+  p
+    margin-bottom: 15px
+    font-size: 1.7em
+    line-height: 1.7em
+
+    .note
+      font-size: 0.8824em
+
+  .note
+    font-size: 1.5em
+    color: #e7ffae
+
+.intro
+  p
+    font-family: $codeFont
+    font-size: 1.5em
+
+  .note
+    font-size: 1.2em
+
+.letter
+  display: inline-block
+  margin: 11px 8px 0 0
+  float: left
+  font-size: 3.5em
+  font-weight: 500
+
+.step-by-step
+  ul
+    margin: 0 0 15px 50px
+    font-size: 1.5em
+    list-style: disc outside
+
+footer
+  margin-top: 80px !important
+  padding: 30px 30px 20px
+  text-align: center
+  font-size: 0.8em
+  border-top: dashed 1px rgba(white, 0.3)
+
+  p:last-child
+    font-style: italic
+    +opacity(0.5)
+    +text-shadow(black 1px 1px 1px)
