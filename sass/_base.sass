@@ -61,6 +61,15 @@ $lightColor: #b2cf53
 @function bgColor($opacity)
   @return rgba(225,218,212,$opacity)
 
+=transBg($color:#000,$transparency:.5,$img:"")
+  @if false
+    @if $img == ""
+      @warn "Image url is not set, but ie support flag is on"
+
+    background: $img
+
+  background: rgba($color,$transparency)
+
 ::-moz-selection
   background: $altColor
   color: #111
